@@ -1,0 +1,90 @@
+{% extends 'core/base.html' %}
+{% block title %}Resource List{% endblock title %}
+{% block main_content %}
+    <!-- Main Content -->
+    <div id="content">
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+            <!-- Content Row -->
+            <div class="row d-flex mt-5">
+                <!-- Datatable Of Resource List -->
+                <div class="col-xl-12 col-lg-12">
+                    <div class="card shadow mb-4">
+                        <!-- Card Header - Dropdown -->
+                        <div
+                            class="card-header py-3 d-flex flex-column align-items-center">
+                            <h3 class="m-0 font-weight-bold text-primary">Resource History</h3>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>ID</th>
+                                                <th>From</th>
+                                                <th>To</th>
+                                                <th>Date</th>
+                                                <th>Category</th>
+                                                <th>Qty</th>
+                                            </tr>
+                                        </thead>
+                                        
+                                        <tbody>
+                                            <tr>
+                                                <td>Daw Aye Aye</td>
+                                                <td>ayeaye@miit.edu.mm</td>
+                                                <td>Store</td>
+                                                <td>Room 203</td>
+                                                <td>2024/1/4</td>
+                                                <td>desktop</td>
+                                                <td>5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Daw Aye Aye</td>
+                                                <td>ayeaye@miit.edu.mm</td>
+                                                <td>Store</td>
+                                                <td>Room 203</td>
+                                                <td>2024/1/4</td>
+                                                <td>desktop</td>
+                                                <td>5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Daw Saw</td>
+                                                <td>saw@miit.edu.mm</td>
+                                                <td>Room 204</td>
+                                                <td>Room 203</td>
+                                                <td>2024/1/4</td>
+                                                <td>Table</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>U Phyu</td>
+                                                <td>uphyu@miit.edu.mm</td>
+                                                <td>Room 203</td>
+                                                <td>Room 204</td>
+                                                <td>2024/1/10</td>
+                                                <td>Blue Chair</td>
+                                                <td>5</td>
+                                            </tr>
+                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <div class="chart-area">
+                                <canvas id="myAreaChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- End of Main Content -->
+{% endblock main_content%}

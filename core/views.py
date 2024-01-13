@@ -1,13 +1,33 @@
 from django.shortcuts import render, redirect
 from django.views import View
-from .models import Student
-from .forms import AddStudentForm
+from .models import Student, Resource
+from .forms import AddStudentForm, AddResourceForm
 # Create your views here.
 
 class Home(View):
     def get(self, request):
-        stu_data = Student.objects.all()
+        stu_data = Resource.objects.all()
         return render(request, 'core/home.html', {'studata': stu_data})
+
+class ResourceList(View):
+    def get(self, request):
+        resourceData = Resource.objects.all()
+        return render(request, 'core/resource-list.html', {'resource-data': resourceData})
+    
+class Add_Resource(View):
+    def get(self, request):
+        fm = AddResourceForm()
+        print(fm)
+        return render(request, 'core/add-resource.html', {'form': fm} )    
+
+    def post(self, request):
+        fm = AddResourceForm(request.POST)
+        if fm.is_valid():
+            fm.save()
+            return redirect('/')
+        else:
+            return render(request, 'core/add-resource.html', {'form': fm} )    
+
 
 class Add_Student(View):
     def get(self, request):
